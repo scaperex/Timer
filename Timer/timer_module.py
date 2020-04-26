@@ -19,7 +19,7 @@ class Timer:
 
     def start(self):
         self.__start_time = time()
-        self.logger.DEBUG("Started {}".format(self.name))
+        self.logger.debug("Started {}".format(self.name))
 
     def stop(self):
         self.__end_time = time()
@@ -34,16 +34,16 @@ class Timer:
             hours = elapsed / 3600
             minutes = hours % 60
             hours = floor(hours)
-            self.logger.DEBUG("{} took {} hours and {:.2f} {} to complete".format(self.name, hours, minutes, unit))
+            self.logger.debug("{} took {} hours and {:.2f} {} to complete".format(self.name, hours, minutes, unit))
         elif elapsed >= 60:
             minutes = floor(elapsed / 60)
             seconds = elapsed % 60
-            self.logger.DEBUG("{} took {} minutes and {:.2f} {} to complete".format(self.name, minutes, seconds, unit))
+            self.logger.debug("{} took {} minutes and {:.2f} {} to complete".format(self.name, minutes, seconds, unit))
         elif elapsed < 0.1:
             unit = "ms"
-            self.logger.DEBUG("{} took {:.2f} {} to complete".format(self.name, elapsed * 1000, unit))
+            self.logger.debug("{} took {:.2f} {} to complete".format(self.name, elapsed * 1000, unit))
         else:
-            self.logger.DEBUG("{} took {:.2f} {} to complete".format(self.name, elapsed, unit))
+            self.logger.debug("{} took {:.2f} {} to complete".format(self.name, elapsed, unit))
 
     def __init_logger(self, logger):
         if logger:
