@@ -1,9 +1,9 @@
 # Timer
-## Simple Yet Convenient Timer For Python 3
+## Simple Yet Convenient Timer For Python 3 from https://github.com/nadavo/Timer
 
 ### Installation
 ```
-pip install git+https://github.com/nadavo/Timer.git
+pip install git+https://github.com/scaperex/Timer.git
 ```
 
 ### Usage
